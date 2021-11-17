@@ -1,7 +1,7 @@
 <h1 style="color: goldenrod; text-align: center;">MicroRaptor</h1>
 <br><br>
 
-<p style="text-align: center;">This is designed to be easy for even a noob at coding can use.<br><br><br><a style="color: red;">README.md will be updated and a docs will be made soon.</a></p>
+<p style="text-align: center;">This is designed to be easy for even a noob at coding can use.<br><br><br><a style="color: red;">README.md will be updated and a docs will be made soon.</a><br><br><br>Difference between 1.0.0 - 1.0.12<br>Change name from before because name in-use.</p>
 
 <br><br>
 -----
@@ -35,7 +35,7 @@
 
 
 ```js
-  const i = Yosemite({
+  const i = MicroRaptor({
     Feature: 'Generator-UUID',
     Options: {
       Type: 4,
