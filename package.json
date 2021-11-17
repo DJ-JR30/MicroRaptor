@@ -1,0 +1,19 @@
+{
+  "name": "yosemite",
+  "description": "This dependence helps everyone to do stuff more effect.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["Yosemite","Generator","Helper"],
+  "author": "DevDex",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
