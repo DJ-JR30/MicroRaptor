@@ -10,7 +10,7 @@
 <p>This is for generates a password. For the options you need the <a style="color: #FF1493;">Length</a> + <a style="color: #FF1493;">one or more of the true/false options set to true</a> to work unless it will console.log a error.</p>
 
 ```js
-  const i = Yosemite({
+  const i = MicroRaptor({
     Feature: 'Generator-Password',
     Options: {
       Length: 20,
