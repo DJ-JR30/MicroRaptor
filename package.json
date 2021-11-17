@@ -1,7 +1,7 @@
 {
   "name": "micro-raptor",
   "description": "This dependence helps everyone to do stuff more effect.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "directories": {
     "test": "test"
