@@ -1,7 +1,7 @@
 <h1 style="color: white; text-align: center;">Yosemite</h1>
 <br><br>
 
-<p></p>
+<p style="text-align: center;">This is designed to be easy for even a noob at coding can use.<br><br><br><a style="color: red;">README.md will be updated and a docs will be made soon.</a></p>
 
 <br><br>
 -----
