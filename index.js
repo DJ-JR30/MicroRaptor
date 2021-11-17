@@ -1,5 +1,5 @@
 
-const { Yosemite } = require('./src/index.js');
+const { MicroRaptor } = require('./src/index.js');
 
 
 
@@ -7,5 +7,5 @@ const { Yosemite } = require('./src/index.js');
 
 
 module.exports = {
-  Yosemite
+  MicroRaptor
 }

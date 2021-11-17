@@ -1,9 +1,9 @@
-const { Yosemite } = require('../index.js');
+const { MicroRaptor } = require('../index.js');
 
 
 
 
-const Main = Yosemite({
+const Main = MicroRaptor({
   Feature: 'Generator-UUID',
   Options: {
     Type: 4,
