@@ -1,5 +1,6 @@
 const { QLog } = require('./Logging.js');
-const { Generate_Password } = require('./GeneratorPassword.js');
+const { Generate_Password } = require('./Generator/GeneratorPassword.js');
+const { GeneratorUUID } = require('./Generator/UUID.js'); 
 
 
 
@@ -91,7 +92,30 @@ function Yosemite(Data) {
   }
   
   
-  
+  if(Feature == 'Generator-UUID') {
+    let Options = Data['Options'];
+    let EType;
+    
+    if(Options == 'undefined' || Options == null) {
+      Options = {
+        Type: 4
+      }
+    }
+    
+    
+    if (Options['Type'] == 'undefined' || Options['Type'] == null) {
+      Options['Type'] = 4;
+      EType = Options['Type'];
+    } else {
+      EType = Options['Type'];
+    }
+    
+    if(EType == 4) {
+      return GeneratorUUID(4);
+    }
+    
+    
+  }
   
   
 }

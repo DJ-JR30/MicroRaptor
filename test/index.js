@@ -4,13 +4,9 @@ const { Yosemite } = require('../index.js');
 
 
 const Main = Yosemite({
-  Feature: 'Generator-Password',
+  Feature: 'Generator-UUID',
   Options: {
-    Length: 20,
-    Uppercase: true,
-    Lowercase: true,
-    Numbers: true,
-    Symbols: true
+    Type: 4,
   }
 })
 
