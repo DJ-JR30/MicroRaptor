@@ -4,9 +4,13 @@ const { MicroRaptor } = require('../index.js');
 
 
 const Main = MicroRaptor({
-  Feature: 'Generator-UUID',
+  Feature: 'Generate-Password',
   Options: {
-    Type: 4,
+    Length: 8,
+    Uppercase: false,
+    Lowercase: true,
+    Numbers: true,
+    Symbols: true
   }
 })
 

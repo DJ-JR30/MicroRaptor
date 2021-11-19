@@ -26,12 +26,31 @@ function QLog(For) {
     console.log(Result);
   }
   
+  if(For == 'Generator-UUID') {
+    Error_Msg = 'Generate UUID have return a undefined or null, Sorry!';
+    Result;
+    
+  }
+  
+  
+  if(For == 'Tempature-ConvertTo-Undefined') {
+    Error_Msg = 'Please set what tempature you want to convert it to.'.red;
+    Result = Log_Start + Error_Msg;
+    
+    console.log(Result);
+  }
+  if(For == 'Format-Error') {
+    Error_Msg = 'Sorry there was a format error!'.red;
+    Result = Log_Start + Error_Msg;
+    
+    console.log(Result);
+  }
   
   
   
   if (For == 'Template_Log') {
-    let Error_Msg = '';
-    let Result = Log_Start + Error_Msg;
+    Error_Msg = ''.red;
+    Result = Log_Start + Error_Msg;
     
     console.log(Result);
   }

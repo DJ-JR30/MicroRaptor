@@ -1,6 +1,14 @@
-const { QLog } = require('./Logging.js');
-const { Generate_Password } = require('./Generator/GeneratorPassword.js');
-const { GeneratorUUID } = require('./Generator/UUID.js'); 
+const { QLog } = require('./Logging/Logging.js');
+const { Gen_Password, Gen_uuid } = require('./Generator/index.js');
+const { DateTime } = require('./Times/dateTime.js');
+const { NSFW } = require('./NSFW/index.js');
+const { Tempature } = require('./Common/index.js');
+
+const { Format } = require('./Format/index.js');
+
+
+
+
 
 
 
@@ -24,103 +32,51 @@ function MicroRaptor(Data) {
   let Feature = Data['Feature'];
   
   
+  
   if(Feature == 'undefined') {
     QLog('Feature');
     return;
   }
   
   
-  if(Feature == 'Generator-Password') {
-    let Options = Data['Options'];
-    let ELength;
-    let EUppercase;
-    let ELowercase;
-    let ENumbers;
-    let ESymbols;
-    
-    if(Options == 'undefined' || Options == null) {
-      Options = {
-        Length: 8,
-        Uppercase: false,
-        Lowercase: false,
-        Numbers: false,
-        Symbols: false
-      }
-    }
-    
-    
-    if(Options['Length'] == 'undefined' || Options['Length'] == null) {
-      Options['Length'] = 8;
-      ELength = Options['Length'];
-    }else{
-      ELength = Options['Length'];
-    }
-    if(Options['Uppercase'] == 'undefined' || Options['Uppercase'] == null) {
-      Options['Uppercase'] = false;
-      EUppercase = Options['Uppercase'];
-    }else{
-      EUppercase = Options['Uppercase'];
-    }
-    if(Options['Lowercase'] == 'undefined' || Options['Lowercase'] == null) {
-      Options['Lowercase'] = false;
-      ELowercase = Options['Lowercase'];
-    }else{
-      ELowercase = Options['Lowercase'];
-    }
-    if(Options['Numbers'] == 'undefined' || Options['Numbers'] == null) {
-      Options['Numbers'] = false;
-      ENumbers = Options['Numbers'];
-    }else{
-      ENumbers = Options['Numbers'];
-    }
-    if(Options['Symbols'] == 'undefined' || Options['Symbols'] == null) {
-      Options['Symbols'] = false;
-      ESymbols = Options['Symbols'];
-    }else{
-      ESymbols = Options['Symbols']
-    }
-    
-    
-    
-    z = Generate_Password(ELength, EUppercase, ELowercase, ENumbers, ESymbols);
-    if(z == 'undefined' || z == null) {
-      QLog('Generator-Password');
-      return;
-    }else{
-      return z;
-    }
+  if(Feature == 'Generate-Password') {
+    return Gen_Password(Data);
   }
   
   
-  if(Feature == 'Generator-UUID') {
+  if(Feature == 'Generate-UUID') {
+    return Gen_uuid(Data);
+  }
+  
+  
+  if(Feature == 'Convert-Tempature') {
     let Options = Data['Options'];
-    let EType;
+    let T = Options['Tempature'];
+    let CT = Options['ConversionTo'];
+    return Tempature(T,CT);
+  }
+  
+  if(Feature == 'Format-Commas') {
+    let Options = Data['Options'];
+    let Numbers = Options['Numbers'];
+    let Commas = Options['Commas'];
     
-    if(Options == 'undefined' || Options == null) {
-      Options = {
-        Type: 4
-      }
-    }
-    
-    
-    if (Options['Type'] == 'undefined' || Options['Type'] == null) {
-      Options['Type'] = 4;
-      EType = Options['Type'];
-    } else {
-      EType = Options['Type'];
-    }
-    
-    if(EType == 4) {
-      return GeneratorUUID(4);
-    }
-    
-    
+    return Format(Numbers, Commas);
   }
   
   
 }
 
+// Feature: ''
+// O: {
+//     
+// }
 
+
+
+
+
+// DateTime
 
 
 module.exports = {
