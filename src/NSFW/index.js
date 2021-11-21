@@ -1,4 +1,5 @@
 const fetch = require('node-fetch');
+const { hentai } = require('./Exports.js');
 
 
 // let Options = {
@@ -8,25 +9,25 @@ const fetch = require('node-fetch');
 
 function NSFW(Type) {
   let EType = Type;
-  if(EType == 'Anal' || EType == 'anal') {
-    return getImage("https://nekobot.xyz/api/image?type=anal");
+  if(EType == 'Hentai' || EType == 'hentai') {
+    return getImage('hentai');
   }
   if(EType == 'FourK' || EType == 'fourk') {
-    return getImage("https://nekobot.xyz/api/image?type=fourk");
+    return;
   }
 }
 
 
+// https://nekobot.xyz/api/image?type=fourk
 
-
-async function getImage(URL) {
-  let H;
-  let J;
-  let R = await fetch(URL).then(json => json.JSON()).then(msg => {
-    H = msg;
-  })
-  J = H;
-  return J;
+function getImage(Type) {
+  
+  if(Type == 'hentai'|| Type == 'Hentai') {
+    let Img = hentai();
+    return Img['message'];
+  }
+  
+  
 }
 
 

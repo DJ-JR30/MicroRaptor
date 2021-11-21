@@ -3,7 +3,7 @@ const colors = require('colors');
 
 
 
-function QLog(For) {
+function QLog(For, MessageImport) {
   let Error_Msg;
   let Result;
   
@@ -41,6 +41,13 @@ function QLog(For) {
   }
   if(For == 'Format-Error') {
     Error_Msg = 'Sorry there was a format error!'.red;
+    Result = Log_Start + Error_Msg;
+    
+    console.log(Result);
+  }
+  
+  if(For == 'PackageVersion') {
+    Error_Msg = MessageImport;
     Result = Log_Start + Error_Msg;
     
     console.log(Result);

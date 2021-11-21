@@ -1,7 +1,7 @@
 <h1 style="color: goldenrod; text-align: center;">MicroRaptor</h1>
 
 <h4 style="text-align: center;">Badges</h4>
-![Version](https://img.shields.io/badge/Version-1.0.13-HEX(CB3837))
+![Version](https://img.shields.io/badge/Version-1.0.14-HEX(CB3837))
 -----
 <br>
 -----
@@ -17,6 +17,12 @@
 ```js
   const { MicroRaptor } = require('micro-raptor');
 ```
+
+<br>
+-----
+<h4 style="color: white; text-align: center;">Recent Update!</h4>
+·Orginized Code in package<br>
+·Added More stuff next Update will have a updated usage and a doc should be made.
 
 <br>
 -----
